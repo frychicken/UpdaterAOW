@@ -25,7 +25,7 @@ class Upd{
 		file2[7] = new File(getClass().getResource("Dog_$1.class").toString().substring(getClass().getResource("Dog_$1.class").toString().indexOf(":")+1));
 		file2[8] = new File(getClass().getResource("DrawCheck.class").toString().substring(getClass().getResource("DrawCheck.class").toString().indexOf(":")+1));
 
-		for(int a =0; a<8; a++) {
+		for(int a =0; a<9; a++) {
 		try {
 			file2[a].delete();
 		} catch (Exception e) {
