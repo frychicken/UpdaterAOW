@@ -19,6 +19,7 @@ class Uaow {
 class Upd{
 	public void doup() throws IOException {
 		File file2[] = new File[9];
+		try {
 		file2[0] = new File(getClass().getResource("Dog_.class").toString().substring(getClass().getResource("Dog_.class").toString().indexOf(":")+1));
     	file2[2] = new File(getClass().getResource("Execut.class").toString().substring(getClass().getResource("Execut.class").toString().indexOf(":")+1));
 		file2[3] = new File(getClass().getResource("Nani.class").toString().substring(getClass().getResource("Nani.class").toString().indexOf(":")+1));
@@ -28,19 +29,22 @@ class Upd{
 		file2[6] = new File(getClass().getResource("Execut$Method_T.class").toString().substring(getClass().getResource("Execut$Method_T.class").toString().indexOf(":")+1));
 		file2[7] = new File(getClass().getResource("Dog_$1.class").toString().substring(getClass().getResource("Dog_$1.class").toString().indexOf(":")+1));
 		file2[8] = new File(getClass().getResource("DrawCheck.class").toString().substring(getClass().getResource("DrawCheck.class").toString().indexOf(":")+1));
-
+		}
+		catch(Exception e) {
+			
+			e.printStackTrace();
+		}
 		for(int a =0; a<9; a++) {
 		try {
 			file2[a].delete();
 		} catch (Exception e) {
 			System.out.println("cannot find file"+file2[a]);
-			JOptionPane.showConfirmDialog((Component) null, "Cannot find file"+file2[a],
+			JOptionPane.showConfirmDialog((Component) null, "Cannot find file "+file2[a],
 					"Update", JOptionPane.CLOSED_OPTION);
 			e.printStackTrace();
 		 }
 		}
-		String cheee = getClass().getResource("").toString();
-		cheee = cheee.substring(cheee.indexOf(":")+1);
+		String cheee =  System.getProperty("user.dir");
 		File file = new File(cheee+"/AOW.jar"); 
 		try {
 			file.delete();
