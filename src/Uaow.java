@@ -6,8 +6,12 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 class Uaow {
-	public static void main(String[] args) throws IOException { 
+	public static void main(String[] args) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException { 
+		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
 		Upd ipd = new Upd();
 		ipd.doup();
 	}
