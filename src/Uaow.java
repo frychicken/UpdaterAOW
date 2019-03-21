@@ -18,7 +18,7 @@ class Uaow {
 }
 class Upd{
 	public void doup() throws IOException {
-		File file2[] = new File[9];
+		File file2[] = new File[10];
 		try {
 		file2[0] = new File(getClass().getResource("Dog_.class").toString().substring(getClass().getResource("Dog_.class").toString().indexOf(":")+1));
     	file2[2] = new File(getClass().getResource("Execut.class").toString().substring(getClass().getResource("Execut.class").toString().indexOf(":")+1));
@@ -29,6 +29,7 @@ class Upd{
 		file2[6] = new File(getClass().getResource("Execut$Method_T.class").toString().substring(getClass().getResource("Execut$Method_T.class").toString().indexOf(":")+1));
 		file2[7] = new File(getClass().getResource("Dog_$1.class").toString().substring(getClass().getResource("Dog_$1.class").toString().indexOf(":")+1));
 		file2[8] = new File(getClass().getResource("DrawCheck.class").toString().substring(getClass().getResource("DrawCheck.class").toString().indexOf(":")+1));
+		file2[9] = new File(getClass().getResource("Estima.class").toString().substring(getClass().getResource("Estima.class").toString().indexOf(":")+1));
 		}
 		catch(Exception e) {
 			
